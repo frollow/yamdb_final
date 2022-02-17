@@ -16,11 +16,11 @@ jobs:
     - name: Install dependencies
       run: | 
         # обновление pip
-        python -m pip install --upgrade pip 
+        python -m pip3 install --upgrade pip 
         # установка flake8 и его плагинов
-        pip install flake8 pep8-naming flake8-broken-line flake8-return flake8-isort
+        pip3 install flake8 pep8-naming flake8-broken-line flake8-return flake8-isort
         # установка зависимостей
-        pip install -r api_yamdb/requirements.txt 
+        pip3 install -r api_yamdb/requirements.txt --no-cache-dir
 
     - name: Test with flake8 and django tests
       run: |
