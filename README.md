@@ -1,7 +1,7 @@
 
 # api_yamdb
 
-![example workflow](https://github.com/frollow/yamdb_final/actions/workflows/yamdb_workflow/badge.svg)
+![example workflow](https://github.com/frollow/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 REST API для сервиса YaMDb — базы отзывов о фильмах, книгах и музыке. (Коллективный проект 3 студентов Яндекс.Практикум)
 
