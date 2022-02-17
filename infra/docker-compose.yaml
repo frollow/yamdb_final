@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3.7'
 
 services:
   db:
@@ -9,7 +9,6 @@ services:
       - ./.env
 
   web:
-    build: .
     image: fartem2003/api_yamdb_web:latest
     restart: always
     volumes:
