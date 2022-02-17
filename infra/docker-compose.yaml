@@ -10,7 +10,7 @@ services:
 
   web:
     build: .
-    image: ${{ secrets.DOCKER_USERNAME }}/api_yamdb_web:latest
+    image: fartem2003/api_yamdb_web:latest
     restart: always
     volumes:
       - static_value:/app/static/

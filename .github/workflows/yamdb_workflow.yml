@@ -68,11 +68,13 @@ jobs:
         username: ${{ secrets.USER }}
         key: ${{ secrets.SSH_KEY }}
         script: |
-          # Выполняет pull образа с DockerHub
-          sudo docker pull ${{ secrets.DOCKER_USERNAME }}/api_yamdb_web:latest  
-          #остановка всех контейнеров
-          sudo docker stop $(sudo docker ps -a -q)
-          sudo docker run --rm -d -p 5000:5000 ${{ secrets.DOCKER_USERNAME }}/api_yamdb_web:latest 
+          # # Выполняет pull образа с DockerHub
+          # sudo docker pull ${{ secrets.DOCKER_USERNAME }}/api_yamdb_web:latest  
+          # #остановка всех контейнеров
+          # sudo docker stop $(sudo docker ps -a -q)
+          # sudo docker run --rm -d -p 5000:5000 ${{ secrets.DOCKER_USERNAME }}/api_yamdb_web:latest 
+          sudo docker-compose down -v 
+          sudo docker-compose up -d --build
 
   send_message:
     runs-on: ubuntu-latest
