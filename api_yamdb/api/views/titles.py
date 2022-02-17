@@ -1,8 +1,9 @@
+from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework import filters, mixins, viewsets
+
 from api.filters import TitleFilters
 from api.serializers import (CategorySerializer, GenreSerializer,
                              TitleSerializer, TitleWriteSerializer)
-from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework import filters, mixins, viewsets
 from titles.models import Category, Genre, Title
 from users.permissions import IsAdminOrReadOnly
 
